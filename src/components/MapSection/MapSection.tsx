@@ -1,40 +1,39 @@
+// @ts-ignore
 import React from 'react';
-import { Map,GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
-import {  MapContainer } from './MapSection_Style';
+import { MapContainer } from './MapSection_Style';
 interface IProps {
-    google:any;
+    google: any;
     locations: any;
 }
+
 export class MapSection extends React.Component<IProps> {
-    onMarkerClick(){
+    onMarkerClick() {
         console.log("here");
-    }   
-    
+    }
+
     render() {
-        const mapStyles = {
-            width: '437px',
-            height: '100%',
-          };
-          var bounds = new this.props.google.maps.LatLngBounds();
-for (var i = 0; i < this.props.locations.length; i++) {
-  bounds.extend(this.props.locations[i]);
-}
         return (
-            <MapContainer id="MapContainer">
-                <Map 
-                    google={this.props.google} 
-                    style={mapStyles} 
-                    initialCenter={{ lat: 19.421875, lng: -99.077674}}
-                    bounds={bounds}
-                >
-                </Map>
+            <MapContainer>
+            <Map google={this.props.google}
+                style={{ width: '100%', height: '100%', position: 'relative' }}
+                center={{
+                    lat: 19.432720,
+                    lng: -99.133200
+                  }}
+            >
+                {this.props.locations.map((location:any)=>(
+                    <Marker
+                    position={location} />
+                ))}
+                
+            </Map>
             </MapContainer>
         )
-
     }
 }
 
 export default GoogleApiWrapper({
     apiKey: 'AIzaSyBkOP3tB5Er7xi4kZ7c4wSePe4e0KJJfmE'
-  })(MapSection);
+})(MapSection);
