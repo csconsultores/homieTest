@@ -2,7 +2,7 @@ import React from 'react';
 
 const BathroomsSvg = () => {
     return (
-        <svg version="1.1" id="Layer_1" x="0px" y="0px" width="10px" height="20px" viewBox="0 0 16 26" enable-background="new 0 0 16 26" >  <image id="image0" width="16" height="26" x="0" y="0"
+        <svg version="1.1" id="Layer_1" x="0px" y="0px" width="10px" height="14px" viewBox="0 0 16 26" enable-background="new 0 0 16 26" >  <image id="image0" width="16" height="26" x="0" y="0"
             href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAaCAQAAAAUYRSMAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
 AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN
 RQfkCxYBEQb42yZ0AAABcElEQVQoz4XTP0vDQBjH8e/FFBwUsVRwEKngok3RTakIopO5aru0Duoi

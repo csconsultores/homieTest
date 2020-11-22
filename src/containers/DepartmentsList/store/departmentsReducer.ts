@@ -15,10 +15,12 @@ import {
   )
 
   const setLocations=(homes:any) => {
-    let locations = homes.map((home: any) => {
-      return (home.location)
-    })
-    return locations
+    let loc=[];
+    for (let i=0; i<12; i++){
+      loc.push({"location":homes[i].location, "price":"$"+homes[i].price})
+    }
+  
+    return loc
   }
   
   export function departmentsReducer(

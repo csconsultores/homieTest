@@ -5,6 +5,8 @@ import * as styles from './Content_Style';
 
 import Map from '../Map/Map';
 import { connect } from 'react-redux';
+import { Found, OtherOptions, Want } from './Content_Style';
+import Button from '@material-ui/core/Button/Button';
 
 const Content = ({ ...props }) => {
     return (
@@ -26,6 +28,14 @@ const Content = ({ ...props }) => {
                 </styles.Filter>
 
                 <DepartmentList />
+
+                <OtherOptions>
+                    <Found>No encuentras depa?</Found>
+                    <Want>Dinos qué quieres y nosotros te lo buscamos</Want>
+                    <Button variant="contained" color="secondary">
+                        Encuéntrenme un depa
+                    </Button>
+                </OtherOptions>
             </styles.DepartmentsSection>
 
             <styles.MapSection >

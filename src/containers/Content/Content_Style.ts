@@ -55,3 +55,28 @@ text-align: center;
 margin-left: 28px;
 color: white;
 `;
+
+export const Found = styled.strong`
+display: block;
+font-size: 16px;
+line-height: 19px;
+margin-bottom: 10px;
+color: #000;
+}
+
+
+`;
+export const Want = styled.div`
+display: block;
+color: rgb(74, 74, 74);
+font-size: 14px;
+line-height: 17px;
+margin-bottom: 23px;
+font-weight: 700;
+`;
+
+export const OtherOptions = styled.div`
+    text-align: center;
+
+    `;
+

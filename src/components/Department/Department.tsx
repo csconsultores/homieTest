@@ -1,4 +1,6 @@
 import React from 'react';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+
 import { IHomes } from '../../containers/DepartmentsList/store/departmentsTypes';
 import BathroomsSvg from '../../SVG/BathroomsSvg';
 import BedroomsSvg from '../../SVG/BedroomSvg';
@@ -28,7 +30,8 @@ const Department = ({ home }: IProps) => {
     return (
         <style.DepartmentContainer background={firstPhoto}>
             <style.Price>
-                {formatter.format(home.price).substring(0, formatter.format(home.price).length - 3)}
+                <div>{formatter.format(home.price).substring(0, formatter.format(home.price).length - 3)}</div>
+                <FavoriteBorderIcon className="heart"/>
             </style.Price>
 
             {home.is_homie_exclusive &&
@@ -55,11 +58,11 @@ const Department = ({ home }: IProps) => {
                 <style.Cell>
                     <div>{home.parkings}</div><ParkingSvg />
                 </style.Cell>
-                <style.Cell pet={true}>
-                    <div >{home.pet_friendly ? "Si": "No"}</div><PetSvg />
+                <style.Cell >
+                    <div className="pet">{home.pet_friendly ? "Si": "No"}</div><PetSvg />
                 </style.Cell>
-                <style.Cell>
-                    <div className="mts">{home.sqare_mts} m2</div>
+                <style.Cell lastCell={true}>
+                    <div className="mts">{home.sqare_mts} m<sup style={{top:"-0.5em"}}>2</sup></div>
                 </style.Cell>
                 </style.Row>
                 </style.Details>

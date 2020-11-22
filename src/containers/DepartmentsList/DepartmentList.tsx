@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import TablePagination from '@material-ui/core/TablePagination';
 import Department from '../../components/Department/Department';
 import { connect, useDispatch } from 'react-redux';
 import { getDepartments } from './store/departmentsActions';
-import { DepartmentListContainer } from './DepartmentList_Style';
+import { DepartmentListContainer, Pagination } from './DepartmentList_Style';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 const DepartmentList = ({ homes, totalHomes, page, rowsPerPage }: any) => {
   const [homesPerPage, setHomePerPage] = useState<any>([])
@@ -20,26 +20,18 @@ const DepartmentList = ({ homes, totalHomes, page, rowsPerPage }: any) => {
  
   }, [homes])
 
-  const handleChangePage = (event:any, newPage:any) => {
-  };
 
-  const handleChangeRowsPerPage = (event:any) => {
-  };
 
   return (
     <DepartmentListContainer>
       {homesPerPage.map((home: any) => (
         <Department home={home} />
       ))}
+      <Pagination>
+              <span>1 a 12 de {totalHomes}</span> <NavigateNextIcon />
+      
+      </Pagination>
 
-      <TablePagination
-        component="div"
-        count={totalHomes}
-        page={page | 0}
-        onChangePage={handleChangePage}
-        rowsPerPage={rowsPerPage | 12}
-        onChangeRowsPerPage={handleChangeRowsPerPage}
-      />
 
     </DepartmentListContainer>
   )

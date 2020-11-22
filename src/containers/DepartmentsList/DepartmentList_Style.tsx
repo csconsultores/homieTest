@@ -6,5 +6,17 @@ export const DepartmentListContainer = styled.div`
     display: flex;
     margin-left: 39px;
     margin-rigth: 20px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    div[id^="mui-"]{
+        display: none;
+    }
+    .MuiTablePagination-input{
+        display: none;
+    }
+`;
+
+export const Pagination = styled.div`
+    margin-top: 30px;
+    margin: 15px auto;
+    text-align: center;
 `;

@@ -1,7 +1,12 @@
 import styled from 'styled-components'
 
 export const FooterContainer = styled.div`
-background-color: #F1F1F1;
 padding: 10px;
+margin-top: 20px
 margin-bottom: 0px;
+border-top:.5px solid #ccc;
+.Footer-h84djn-0{
+    display: flex;
+    flex-direction: row;
+}
 `;

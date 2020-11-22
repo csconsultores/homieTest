@@ -14,21 +14,29 @@ export class MapSection extends React.Component<IProps> {
     }
 
     render() {
+
         return (
-            <MapContainer>
-            <Map google={this.props.google}
-                style={{ width: '100%', height: '100%', position: 'relative' }}
-                center={{
-                    lat: 19.432720,
-                    lng: -99.133200
-                  }}
-            >
-                {this.props.locations.map((location:any)=>(
-                    <Marker
-                    position={location} />
-                ))}
+            <MapContainer id="mapContainer">
+                {this.props.locations &&
+                                <Map google={this.props.google}
+                    style={{ width: '455px', height: '100%', position: 'relative' }}
+                    center={{
+                        lat: 19.432720,
+                        lng: -99.133200
+                    }}
+                    zoom={10}
+                >
+                    {this.props.locations.map((location: any) => (
+                        <Marker
+                            position={location.location}
+                            label={location.price}
+                        />
+                    ))}
+
+                </Map>
                 
-            </Map>
+                }
+
             </MapContainer>
         )
     }
