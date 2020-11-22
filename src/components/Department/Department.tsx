@@ -1,6 +1,11 @@
 import React from 'react';
 import { IHomes } from '../../containers/DepartmentsList/store/departmentsTypes';
+import BathroomsSvg from '../../SVG/BathroomsSvg';
+import BedroomsSvg from '../../SVG/BedroomSvg';
+import ParkingSvg from '../../SVG/ParkingSvg';
+import PetSvg from '../../SVG/PetSvg';
 import * as style from './Department_Style';
+
 
 interface IProps {
     home: IHomes
@@ -42,19 +47,19 @@ const Department = ({ home }: IProps) => {
                 <style.Details>
                 <style.Row>
                 <style.Cell>
-                    uno
+                    <div>{home.bedrooms}</div><BedroomsSvg />
                 </style.Cell>
                 <style.Cell>
-                    uno
+                    <div className="bathrooms">{home.bathrooms}</div><BathroomsSvg />
                 </style.Cell>
                 <style.Cell>
-                    uno
+                    <div>{home.parkings}</div><ParkingSvg />
+                </style.Cell>
+                <style.Cell pet={true}>
+                    <div >{home.pet_friendly ? "Si": "No"}</div><PetSvg />
                 </style.Cell>
                 <style.Cell>
-                    uno
-                </style.Cell>
-                <style.Cell>
-                    uno
+                    <div className="mts">{home.sqare_mts} m2</div>
                 </style.Cell>
                 </style.Row>
                 </style.Details>

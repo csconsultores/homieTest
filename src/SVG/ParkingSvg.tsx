@@ -1,0 +1,34 @@
+import React from 'react';
+
+const ParkingSvg = () => {
+    return (
+        <svg version="1.1" id="Layer_1" x="0px" y="0px" width="25px" height="12px" viewBox="0 0 47 38" enable-background="new 0 0 47 38" >
+            <image id="image0" width="47" height="38" x="0" y="0"
+                href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAmCAQAAAD+IQrvAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN
+RQfkCxYBEQARuINBAAAEI0lEQVRIx62XX2xTVRzHP+dSRhccdpolpnF/YZvbHjSNkUVjjQKGnT44
+3UyWmBH889LoDMl44smoGCQ8CD4UM2cmanwYJiPYuyYKyzDqSJBFwwS6UVaQZoEYSiZ067p7fLi3
+3dre0db4fbrnd373c3/3e+/9nXMFa8jXoA7ipYpCmmeKA/oJ+0lhH5bdfEFFQXRGaqjuzYCRH19n
+C28hxMbi4SCeuHN3+pciq5ff4wNu0c85sViAXKvewwskcOvxIvDSxS0cQOdajublh6kCdulf5c5p
+NvnbcQCx2pPFGaPH+Q6Al/Ln7PDbADhl96jWUAiAF/x5NDv8TgB+KBoO46SAyujjBfEdm6kDMMaK
+p+txzgGwvSBeM1OmQn+VUD3KvNcXC+LVDgBOlwIHzbzXZzqd2XEHgG+r8bFoNY+pBOBUafj1vyYT
+lFOevClTAMTEp8HPQIB0EbGgK2rVL5Z2AXkDd07oVf24BjyXB4ejHZuLR3dslIfy4Cifac4mAG7z
+NWfE3+pl+gCvuCQjXCuK/gBtVvs7L/YaG3ha+PCAqDDxFyzP++hRTbXjURe9gIMmmkryJ2z4QnPy
+GL1W9X+CBvokE1ZClWgOGLW72UW4NOeZVx+wNTQHPGtFEnxptbROZ/JD+oGUco3eBfBr0WbaxMPF
+kNU9ETYumOeBPE4XMCFeC0asF3NkQf5EPxBJJwUMLlLiu5O2RHQBN4IRWPmsTJen/wswW8Jk1Jsj
+hxVtACBiDnwNyqP+ERP5y4Oddj6qtbNknA3NAYiwAmg059LVVwNwBfyaPKQuMyxGicjuwnDfPu0q
+w4xoYfkGwHIUgArpWo2vA2AWon30Z9rDMdlyf7jsVvut7AoGfc9D/U0SK/akzakBEHPAHutCD1JJ
+OX7eBb921b2uLBu8nKyPBQz6AYixnipQbzMWMOR1moAaJi28dJlf3XK005msAxDb2KGOAi3g16Jj
+mlfl1K0Rnep8MtkMIF5R1QwDjwFwjaa0Hw4Aw2l65IyPLMhZ6kAN8wgAMxDdhNfWmbYlN5dpBzVo
+bVsuAXAHgLLV5mQkBtR+wANASgyBHpd76CHHHJLiZDAiB2gH2syQ+jyXloevOTDbKHYDkOCd4FkA
+/TCH7R9t7VC01fI/xb7RUEF8wOB1eUQ8pe4ZY4UXxIDBXjkovGpJjY9eyZ932J2kTzJZCLwq+z7t
+Iwuf/FmaB9U4KVUpYpgbxvq1qveUDF2t/DXPdhv1Pyq7+laxCKqLg8CsGCgWojzpHg+gjuDLwmsL
+1sjJIqgKATAT/KhYvOylCygzhKbAWneTGbwelzHcwHlFZk/+ewkemKu1R8ystA7xB2S8F+/nnHDb
++KR4uj5JMCd0pmYcMj8/0781XmcLD6EB8/xIz2ikhOrZckJswI0LgBjf8Na3CYB/AYzGSWgHeBrr
+AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTExLTIyVDAxOjE3OjAwKzAzOjAwAfTamgAAACV0RVh0
+ZGF0ZTptb2RpZnkAMjAyMC0xMS0yMlQwMToxNzowMCswMzowMHCpYiYAAAAASUVORK5CYII=" />
+        </svg>
+    )
+}
+
+export default ParkingSvg;

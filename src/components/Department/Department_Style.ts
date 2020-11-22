@@ -58,17 +58,43 @@ export const Address= styled.div`
 
 export const Details= styled.div`
     width: 100%;
-    height:50px;
+    height:35px;
     bottom: 0;
     display: table;
+    position: absolute;
 `;
 
 export const Row= styled.div`
     display: table-row;
     `;
 
+    interface IPet {
+        pet?: boolean;
+    }
+
 export const Cell= styled.div`
+    width: 20%;
     display: table-cell;
-    padding: 12px;
-    background: #ddd;
+    padding: 0;
+    border-right: 1px solid #ddd;
+    position:relative;
+    div {
+        float:left;
+        position: absolute;
+        margin-right: 3px;
+        display: block;
+
+    }        
+    
+    .mts {
+        margin-top: 6px;
+    }
+
+    .bathrooms {
+        margin-top: 4px;
+    }
+
+    svg {
+        margin-left: ${(props:IPet) => props.pet ? "15px": "10px"}
+    }
     `;
