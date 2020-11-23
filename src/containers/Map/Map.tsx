@@ -6,6 +6,7 @@ import MapSection from '../../components/MapSection/MapSection';
 interface IProps {
     dispatch: any;
     locations: any;
+    selectedId: any;
 }
 
 export class Map extends React.Component<IProps> {
@@ -13,7 +14,10 @@ export class Map extends React.Component<IProps> {
     render() {
         return (
             <React.Fragment>
-                <MapSection locations={this.props.locations}/>
+                <MapSection 
+                locations={this.props.locations}
+                selectedId={this.props.selectedId}
+                />
             </React.Fragment> 
         )
     }
@@ -21,7 +25,8 @@ export class Map extends React.Component<IProps> {
 
 const mapState = (state: any) => {
     return {
-      locations: state.locations
+      locations: state.locations,
+      selectedId: state.selectedId
     }
   }
   

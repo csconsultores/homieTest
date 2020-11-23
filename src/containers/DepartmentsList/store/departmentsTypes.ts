@@ -1,12 +1,13 @@
 export const GET_HOMES_REQUESTED = 'GET_HOMES_REQUESTED';
 export const SET_HOMES = 'SET_HOMES';
+export const SET_SELECTED_ID = 'SET_SELECTED_ID';
 
 interface GetHomes {
     type: typeof GET_HOMES_REQUESTED,
     payload: any
   }
 interface SetHomes {
-    type: typeof SET_HOMES,
+    type: typeof SET_HOMES | typeof SET_SELECTED_ID,
     payload: any
   }
   

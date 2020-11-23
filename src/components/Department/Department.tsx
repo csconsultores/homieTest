@@ -7,28 +7,24 @@ import BedroomsSvg from '../../SVG/BedroomSvg';
 import ParkingSvg from '../../SVG/ParkingSvg';
 import PetSvg from '../../SVG/PetSvg';
 import * as style from './Department_Style';
+import { formatter } from '../../utils';
 
 
 interface IProps {
-    home: IHomes
+    home: IHomes,
+    setSelectedId: any
 }
 
-const Department = ({ home }: IProps) => {
+const Department = ({ home, setSelectedId }: IProps) => {
     const photos = home.photos;
     const firstPhoto = photos[0];
-    console.log(home);
 
-    // Create our number formatter.
-    const formatter = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
-        // These options are needed to round to whole numbers if that's what you want.
-        //minimumFractionDigits: 0,
-        //maximumFractionDigits: 0,
-    });
+    const mouseOver=()=>{
+        setSelectedId(home.id)
+    }
 
     return (
-        <style.DepartmentContainer background={firstPhoto}>
+        <style.DepartmentContainer onMouseOver={mouseOver} id={home.id} background={firstPhoto}>
             <style.Price>
                 <div>{formatter.format(home.price).substring(0, formatter.format(home.price).length - 3)}</div>
                 <FavoriteBorderIcon className="heart"/>
@@ -38,8 +34,7 @@ const Department = ({ home }: IProps) => {
                 <style.Exclusive>
                     <span>
                         Exclusivo de Homie
-                </span>
-
+                    </span>
                 </style.Exclusive>
             }
 

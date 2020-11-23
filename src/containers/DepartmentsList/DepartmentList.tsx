@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Department from '../../components/Department/Department';
 import { connect, useDispatch } from 'react-redux';
-import { getDepartments } from './store/departmentsActions';
+import { getDepartments, selectId } from './store/departmentsActions';
 import { DepartmentListContainer, Pagination } from './DepartmentList_Style';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
@@ -14,18 +14,23 @@ const DepartmentList = ({ homes, totalHomes, page, rowsPerPage }: any) => {
   }, [dispatch])
 
   useEffect(() => {
-    if (homes.length > 0){
+    if (homes && homes.length > 0){
         setHomePerPage(homes.splice(0, 12)) 
     }
  
-  }, [homes])
+  }, [homes]);
 
-
+  const setSelectId =(id: any)=>{
+    dispatch(selectId(id)) 
+  }
 
   return (
     <DepartmentListContainer>
       {homesPerPage.map((home: any) => (
-        <Department home={home} />
+        <Department 
+          home={home}
+          setSelectedId={setSelectId}
+        />
       ))}
       <Pagination>
               <span>1 a 12 de {totalHomes}</span> <NavigateNextIcon />

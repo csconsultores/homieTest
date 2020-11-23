@@ -7,7 +7,8 @@ import {
     totalHomes: 0,
     page: 1,
     rowsPerPage: 12,
-    locations: []
+    locations: [],
+    selectedId: 0
   }
 
   const totalHomes=(homes:any)=>(
@@ -17,7 +18,7 @@ import {
   const setLocations=(homes:any) => {
     let loc=[];
     for (let i=0; i<12; i++){
-      loc.push({"location":homes[i].location, "price":"$"+homes[i].price})
+      loc.push({"location":homes[i].location, "price":"$"+homes[i].price, "id":homes[i].id})
     }
   
     return loc
@@ -33,6 +34,10 @@ import {
           homes: action.payload,
           totalHomes: totalHomes(action.payload),
           locations: setLocations(action.payload)
+        }
+      case "SET_SELECTED_ID":
+        return {
+          selectedId: action.payload
         }
   
       default:
