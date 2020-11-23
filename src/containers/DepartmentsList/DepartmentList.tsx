@@ -30,6 +30,7 @@ const DepartmentList = ({ homes, totalHomes, page, rowsPerPage }: any) => {
         <Department 
           home={home}
           setSelectedId={setSelectId}
+          key={home.id}
         />
       ))}
       <Pagination>

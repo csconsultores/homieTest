@@ -20,7 +20,7 @@ const Department = ({ home, setSelectedId }: IProps) => {
     const firstPhoto = photos[0];
 
     const mouseOver=()=>{
-        setSelectedId(home.id)
+        //setSelectedId(home.id)
     }
 
     return (
